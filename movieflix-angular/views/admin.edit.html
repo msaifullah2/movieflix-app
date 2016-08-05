@@ -1,0 +1,48 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#home">MovieFlix</a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="#/addmovies">Add Movies</a></li>
+        <li><a href="#/deletemovies">Delete</a></li>
+        <li><a href="#/updatemovies">Update</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<marquee><h4><b> Edit Movies </b></h4></marquee>
+<marquee><h2><b> Edit Movies </b></h2></marquee>
+
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th ng-click="editVm.changeSort('title')">Title</th>
+    <th ng-click="editVm.changeSort('year')">Year</th>
+    <th ng-click="editVm.changeSort('actors')">Actors</th>
+    <th ng-click="editVm.changeSort('director')">Director</th>
+    <th ng-click="editVm.changeSort('plot')">Plot</th>
+    <th>Edit</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr ng-repeat="user in editVm.users">
+    <td>{{user.title}}</td>
+    <td>{{user.year}}</td>
+    <td>{{user.actors}}</td>
+    <td>{{user.director}}</td>
+    <td>{{user.plot}}</td>
+    <td>
+      <button type="button" ng-click="editVm.edit(user.id)" class="btn btn-success custom-width">Edit</button>
+    </td>
+  </tr>
+  </tbody>
+</table>

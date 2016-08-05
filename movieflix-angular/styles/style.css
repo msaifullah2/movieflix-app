@@ -1,0 +1,57 @@
+h1{
+  font-size: 30px;
+  font-family: "sans-serif";
+}
+.form{
+  width: 520px;
+  height: 600px;
+  text-align: center;
+  background-color: whitesmoke;
+  border-radius: 8px;
+  margin: 0 auto;
+  margin-top: 50px;
+
+}
+.form-admin{
+  text-align: center;
+  background-color: whitesmoke;
+  border-radius: 8px;
+  margin: 0 auto;
+  margin-top: 50px;
+  height: 900px;
+}
+.bgimage{
+  background-image: url("http://www.studiocity-macau.com/uploads/images/SC/Entertainment/Batman/batman_share.jpg");
+  background-repeat: no-repeat;
+  background-size: 150% 720px;
+}
+input{
+  height: 45px;
+  width: 300px;
+  font-size: 15px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  padding-left: 30px;
+}
+
+
+.button-signup{
+  padding: 10px 30px;
+  color: #fff;
+  border-radius: 12px;
+  border: medium;
+  display: inline;
+  background-color:green;
+}
+
+a{
+  color: black;
+  padding-right: 10px;
+  padding-bottom: 30px;
+}
+.field-wrap{
+  width: 450px;
+  display: inline-block;
+  text-align: right;
+}
+

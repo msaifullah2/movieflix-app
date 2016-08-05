@@ -1,0 +1,51 @@
+<div class="bgimage">
+
+<div class="Admin-button">>
+
+  </div>
+<form name="userForm" ng-submit="registerVm.submit()" novalidate>
+
+<div class="form">
+
+
+  <div class="tab-content">
+    <div id="#/register">
+      <h1><i>Welcome to MovieFlix</i></h1>
+      <div class="top-row">
+        <div class="field-wrap" ng-class="{ 'has-error': userForm.firstName.$dirty && userForm.firstName.$error.required }">
+          <label for="firstName">
+          </label>
+          <input type="text" class="form-control" name="firstName" id="firstName" ng-model="registerVm.newUser.firstName" placeholder="Your First Name" required minlength="3">
+          <span ng-show="userForm.firstName.$dirty && userForm.firstName.$error.required" class="help-block">First name is required</span>
+        </div>
+
+        <div class="field-wrap" ng-class="{ 'has-error': userForm.lastName.$dirty && userForm.lastName.$error.required }">
+          <label for="lastName"></label>
+          <input type="text" class="form-control" name="lastName" id="lastName" ng-model="registerVm.newUser.lastName" placeholder="Your Last Name" required minlength="3">
+          <span ng-show="userForm.lastName.$dirty && userForm.lastName.$error.required" class="help-block">Last name is required</span>
+        </div>
+      </div>
+
+      <div class="field-wrap" ng-class="{ 'has-error': userForm.username.$dirty && userForm.username.$error.required }">
+        <label for="username"></label>
+        <input type="email" class="form-control" name="username" id="username" ng-model="registerVm.newUser.username" placeholder="example@domain.com" required>
+        <span ng-show="userForm.username.$dirty && userForm.username.$error.required" class="help-block">Email is required</span>
+
+      </div>
+
+      <div class="field-wrap" ng-class="{ 'has-error': userForm.password.$dirty && userForm.password.$error.required }">
+        <label for="password"></label>
+        <input type="password" class="form-control" name="password" id="password" ng-model="registerVm.newUser.password" placeholder="Enter password" required>
+        <span ng-show="userForm.password.$dirty && userForm.password.$error.required" class="help-block">Password is required</span>
+      </div>
+      </div>
+      <input type="submit" class="btn btn-success" value="{{!registerVm.newUser.id ? 'Register' : 'Update User'}}" ng-disabled="userForm.$invalid">
+
+      <a href="#/login" class="btn btn-default">Member?</a>
+    <a class="btn btn-default" href="#/addmovies" role="button">Admin</a>
+    </div><!-- tab-content -->
+  </div> <!-- /form -->
+
+</form>
+
+</div>

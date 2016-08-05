@@ -1,0 +1,172 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#/home">MovieFlix</a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="#/addmovies">Add Movies</a></li>
+        <li><a href="#/deletemovies">Delete</a></li>
+        <li><a href="#/updatemovies">Update</a></li>
+      </ul>
+   </div>
+  </div>
+</nav>
+<form name="userForm" ng-submit="adminVm.submit()" novalidate>
+<div class="form-admin">
+  <div id="#/admin">
+
+  <div class="tab-content">
+
+      <h1><i>Welcome Admin</i></h1>
+      <div class="top-row">
+        <div class="field-wrap" ng-class="{ 'has-error': userForm.title.$dirty && userForm.title.$error.required }">
+          <label for="title">
+          </label>
+          <input type="text" class="form-control" name="title" id="title" ng-model="adminVm.newUser.title" placeholder="Title">
+          <span ng-show="userForm.title.$dirty && userForm.title.$error.required" class="help-block">Title is required</span>
+        </div>
+
+        <div class="field-wrap" ng-class="{ 'has-error': userForm.year.$dirty && userForm.year.$error.required }">
+          <label for="year">
+          </label>
+          <input type="text" class="form-control" name="year" id="year" ng-model="adminVm.newUser.year" placeholder="Year">
+          <span ng-show="userForm.year.$dirty && userForm.year.$error.required" class="help-block">Year is required</span>
+        </div>
+
+
+        <div class="field-wrap" ng-class="{ 'has-error': userForm.rated.$dirty && userForm.rated.$error.required }">
+          <label for="rated">
+          </label>
+          <input type="text" class="form-control" name="rated" id="rated" ng-model="adminVm.newUser.rated" placeholder="Rated">
+          <span ng-show="userForm.rated.$dirty && userForm.rated.$error.required" class="help-block">Rated is required</span>
+        </div>
+
+        <div class="field-wrap" ng-class="{ 'has-error': userForm.released.$dirty && userForm.released.$error.required }">
+          <label for="released">
+          </label>
+          <input type="text" class="form-control" name="released" id="released" ng-model="adminVm.newUser.released" placeholder="Released">
+          <span ng-show="userForm.released.$dirty && userForm.released.$error.required" class="help-block">Released is required</span>
+        </div>
+
+        <div class="field-wrap" ng-class="{ 'has-error': userForm.runtime.$dirty && userForm.runtime.$error.required }">
+          <label for="runtime">
+          </label>
+          <input type="text" class="form-control" name="runtime" id="runtime" ng-model="adminVm.newUser.runtime" placeholder="Runtime">
+          <span ng-show="userForm.runtime.$dirty && userForm.runtime.$error.required" class="help-block">Runtime is required</span>
+        </div>
+
+        <div class="field-wrap" ng-class="{ 'has-error': userForm.genre.$dirty && userForm.genre.$error.required }">
+          <label for="genre">
+          </label>
+          <input type="text" class="form-control" name="genre" id="genre" ng-model="adminVm.newUser.genre" placeholder="Genre">
+          <span ng-show="userForm.genre.$dirty && userForm.genre.$error.required" class="help-block">Genre is required</span>
+        </div>
+
+        <div class="field-wrap" ng-class="{ 'has-error': userForm.director.$dirty && userForm.director.$error.required }">
+          <label for="director">
+          </label>
+          <input type="text" class="form-control" name="year" id="director" ng-model="adminVm.newUser.director" placeholder="Director">
+          <span ng-show="userForm.director.$dirty && userForm.director.$error.required" class="help-block">Director is required</span>
+        </div>
+
+        <div class="field-wrap" ng-class="{ 'has-error': userForm.writer.$dirty && userForm.writer.$error.required }">
+          <label for="writer">
+          </label>
+          <input type="text" class="form-control" name="writer" id="writer" ng-model="adminVm.newUser.writer" placeholder="Writer">
+          <span ng-show="userForm.writer.$dirty && userForm.writer.$error.required" class="help-block">Writer is required</span>
+        </div>
+
+        <div class="field-wrap" ng-class="{ 'has-error': userForm.actors.$dirty && userForm.actors.$error.required }">
+          <label for="actors">
+          </label>
+          <input type="text" class="form-control" name="actors" id="actors" ng-model="adminVm.newUser.actors" placeholder="Actors">
+          <span ng-show="userForm.actors.$dirty && userForm.actors.$error.required" class="help-block">Actors is required</span>
+        </div>
+
+        <div class="field-wrap" ng-class="{ 'has-error': userForm.plot.$dirty && userForm.plot.$error.required }">
+          <label for="plot">
+          </label>
+          <input type="text" class="form-control" name="plot" id="plot" ng-model="adminVm.newUser.plot" placeholder="Plot">
+          <span ng-show="userForm.plot.$dirty && userForm.plot.$error.required" class="help-block">Plot is required</span>
+        </div>
+
+        <div class="field-wrap" ng-class="{ 'has-error': userForm.language.$dirty && userForm.language.$error.required }">
+          <label for="language">
+          </label>
+          <input type="text" class="form-control" name="language" id="language" ng-model="adminVm.newUser.language" placeholder="Language">
+          <span ng-show="userForm.language.$dirty && userForm.language.$error.required" class="help-block">Language is required</span>
+        </div>
+
+        <div class="field-wrap" ng-class="{ 'has-error': userForm.country.$dirty && userForm.country.$error.required }">
+          <label for="country">
+          </label>
+          <input type="text" class="form-control" name="year" id="country" ng-model="adminVm.newUser.country" placeholder="Country">
+          <span ng-show="userForm.country.$dirty && userForm.country.$error.required" class="help-block">Country is required</span>
+        </div>
+
+        <div class="field-wrap" ng-class="{ 'has-error': userForm.awards.$dirty && userForm.awards.$error.required }">
+          <label for="awards">
+          </label>
+          <input type="text" class="form-control" name="awards" id="awards" ng-model="adminVm.newUser.awards" placeholder="Awards">
+          <span ng-show="userForm.awards.$dirty && userForm.awards.$error.required" class="help-block">Awards is required</span>
+        </div>
+
+        <div class="field-wrap" ng-class="{ 'has-error': userForm.poster.$dirty && userForm.poster.$error.required }">
+          <label for="poster">
+          </label>
+          <input type="text" class="form-control" name="poster" id="poster" ng-model="adminVm.newUser.poster" placeholder="Poster">
+          <span ng-show="userForm.poster.$dirty && userForm.poster.$error.required" class="help-block">Poster is required</span>
+        </div>
+
+        <div class="field-wrap" ng-class="{ 'has-error': userForm.metascore.$dirty && userForm.metascore.$error.required }">
+          <label for="metascore">
+          </label>
+          <input type="text" class="form-control" name="metascore" id="metascore" ng-model="adminVm.newUser.metascore" placeholder="Metascore">
+          <span ng-show="userForm.metascore.$dirty && userForm.metascore.$error.required" class="help-block">Metascore is required</span>
+        </div>
+
+        <div class="field-wrap" ng-class="{ 'has-error': userForm.imdbRating.$dirty && userForm.imdbRating.$error.required }">
+          <label for="imdbRating">
+          </label>
+          <input type="text" class="form-control" name="year" id="imdbRating" ng-model="adminVm.newUser.imdbRating" placeholder="imdbRating">
+          <span ng-show="userForm.imdbRating.$dirty && userForm.imdbRating.$error.required" class="help-block">imdbRating is required</span>
+        </div>
+
+
+        <div class="field-wrap" ng-class="{ 'has-error': userForm.imdbVotes.$dirty && userForm.imdbVotes.$error.required }">
+          <label for="imdbVotes">
+          </label>
+          <input type="text" class="form-control" name="imdbVotes" id="imdbVotes" ng-model="adminVm.newUser.imdbVotes" placeholder="imdbVotes">
+          <span ng-show="userForm.imdbVotes.$dirty && userForm.imdbVotes.$error.required" class="help-block">imdbVotes is required</span>
+        </div>
+
+        <div class="field-wrap" ng-class="{ 'has-error': userForm.imdbID.$dirty && userForm.imdbID.$error.required }">
+          <label for="imdbID">
+          </label>
+          <input type="text" class="form-control" name="imdbID" id="imdbID" ng-model="adminVm.newUser.imdbID" placeholder="imdbID">
+          <span ng-show="userForm.imdbID.$dirty && userForm.imdbID.$error.required" class="help-block">imdbID is required</span>
+        </div>
+
+        <div class="field-wrap" ng-class="{ 'has-error': userForm.type.$dirty && userForm.type.$error.required }">
+          <label for="type">
+          </label>
+          <input type="text" class="form-control" name="type" id="type" ng-model="adminVm.newUser.type" placeholder="Type">
+          <span ng-show="userForm.type.$dirty && userForm.type.$error.required" class="help-block">Type is required</span>
+        </div>
+      </div>
+    <input type="submit" class="btn btn-primary" value="{{!adminVm.newUser.id ? 'Add Movie' : 'Update User'}}" ng-disabled="userForm.$invalid">
+
+  </div><!-- tab-content -->
+  </div>
+</div> <!-- /form -->
+
+</form>
+

@@ -1,0 +1,46 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#/home">MovieFlix</a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="#/addmovies">Add Movies</a></li>
+        <li><a href="#/deletemovies">Delete</a></li>
+        <li><a href="#/updatemovies">Update</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<marquee><h4><b>Warning!!! Movies can be deleted permanently</b></h4></marquee>
+<marquee><h2><b>Warning!!! Movies can be deleted permanently</b></h2></marquee>
+
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th ng-click="deleteVm.changeSort('title')">Title</th>
+    <th ng-click="deleteVm.changeSort('year')">Year</th>
+    <th ng-click="deleteVm.changeSort('actors')">Actors</th>
+    <th ng-click="deleteVm.changeSort('director')">Director</th>
+    <th ng-click="deleteVm.changeSort('plot')">Plot</th>
+    <th>Delete</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr ng-repeat="user in deleteVm.users">
+    <td>{{user.title}}</td>
+    <td>{{user.year}}</td>
+    <td>{{user.actors}}</td>
+    <td>{{user.director}}</td>
+    <td>{{user.plot}}</td>
+    <td><i ng-click="deleteVm.deleteUser(user.id)" class="glyphicon glyphicon-remove"></i></td>
+  </tr>
+  </tbody>
+</table>
